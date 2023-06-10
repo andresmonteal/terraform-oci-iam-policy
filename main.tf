@@ -7,7 +7,7 @@
 locals {
   default_freeform_tags = {
     terraformed = "Please do not edit manually"
-    module      = "oracle-terraform-oci-iam-dynamic-group"
+    module      = "oracle-terraform-oci-iam-policy"
   }
   merged_freeform_tags = merge(var.freeform_tags, local.default_freeform_tags)
   compartment_id       = try(data.oci_identity_compartments.compartment.compartments[0].id, var.compartment_id)
